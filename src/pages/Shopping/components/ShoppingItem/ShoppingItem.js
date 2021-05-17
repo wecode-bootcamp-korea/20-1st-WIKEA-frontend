@@ -4,6 +4,7 @@ import './ShoppingItem.scss';
 
 class ShoppingItem extends React.Component {
   render() {
+    const { product } = this.props;
     return (
       <div className="shopping_item">
         <img
@@ -15,7 +16,9 @@ class ShoppingItem extends React.Component {
         <div className="shopping_bag_one_of_item_info_container">
           <div className="shopping_bag_item_details_and_price">
             <div className="shopping_bag_item_details">
-              <p className="shopping_bag_item_name_swedish">LAMPAN 람판</p>
+              <p className="shopping_bag_item_name_swedish">
+                {product.english_name} 람판
+              </p>
               <p className="shopping_bag_item_name_and_color">
                 탁상스탠드, 화이트
               </p>

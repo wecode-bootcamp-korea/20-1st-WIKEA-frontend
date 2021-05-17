@@ -3,7 +3,26 @@ import ShoppingItem from './components/ShoppingItem/ShoppingItem';
 import './Shopping.scss';
 
 class Shopping extends Component {
+  constructor() {
+    super();
+    this.state = {
+      product: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch('/data/shoppingData.json')
+      .then(response => response.json())
+      .then(product => {
+        this.setState({
+          product,
+        });
+      });
+  }
+
   render() {
+    const { product } = this.state;
+
     return (
       <main className="shopping">
         <div className="grid-container">
@@ -16,7 +35,9 @@ class Shopping extends Component {
                   <button>...</button>
                 </header>
                 <div>
-                  <ShoppingItem />
+                  {product.map(p => {
+                    return <ShoppingItem key={p.id} product={p} />;
+                  })}
                 </div>
               </article>
             </div>
