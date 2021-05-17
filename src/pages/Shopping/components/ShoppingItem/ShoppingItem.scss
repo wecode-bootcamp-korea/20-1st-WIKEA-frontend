@@ -1,0 +1,108 @@
+@import '../../../../styles/var.scss';
+
+.shopping_item {
+  display: flex;
+  padding: 40px 0px;
+  border-bottom: 1px solid $--colour-border-dark;
+
+  .shopping_bag_one_of_item_photo {
+    width: 140px;
+    height: 140px;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  .shopping_bag_one_of_item_info_container {
+    position: relative;
+    width: 100%;
+
+    .shopping_bag_item_details_and_price {
+      position: relative;
+      width: 100%;
+
+      .shopping_bag_item_details {
+        .shopping_bag_item_name_swedish {
+          margin-bottom: 5px;
+          font-size: 12px;
+          font-weight: 700;
+
+          &:hover {
+            width: 75px;
+            border-bottom: 1px solid $--colour-border-dark;
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+
+        .shopping_bag_item_name_and_color {
+          margin-bottom: 5px;
+          font-size: 12px;
+        }
+
+        .shopping_bag_item_size {
+          font-size: 12px;
+        }
+      }
+
+      .shopping_bag_item_price {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+
+    .shopping_bag_item_control_list {
+      position: absolute;
+      bottom: 0px;
+      display: flex;
+
+      .shopping_bag_item_select_container {
+        position: relative;
+        width: 80px;
+        height: 40px;
+        margin-right: 30px;
+        border: 1px solid $--color-light-gray;
+        border-radius: 50px;
+
+        &:hover {
+          border: 1px solid $--colour-border-default;
+        }
+
+        #shopping_bag_item_quantities_select {
+          position: absolute;
+          top: 8px;
+          left: 15px;
+          width: 50px;
+          border-radius: 50px;
+          font-size: 12px;
+        }
+      }
+
+      .shopping_bag_item_delete {
+        margin-right: 30px;
+        padding-top: 10px;
+        font-size: 12px;
+
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+
+      .shopping_bag_item_wish_list_save {
+        padding-top: 10px;
+        font-size: 12px;
+
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
