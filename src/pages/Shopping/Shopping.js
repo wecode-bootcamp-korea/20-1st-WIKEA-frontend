@@ -22,7 +22,6 @@ class Shopping extends Component {
 
   render() {
     const { productList } = this.state;
-
     return (
       <main className="shopping">
         <div className="grid-container">
