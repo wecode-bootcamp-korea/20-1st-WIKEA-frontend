@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "english_name": "lamp",
+    "korean_name": "램프",
+    "sub_category": "일반조명",
+    "price": "200.00",
+    "url": "",
+    "quantity": 3
+  },
+  {
+    "id": 2,
+    "english_name": "desklamp",
+    "korean_name": "책상램프",
+    "sub_category": "일반조명",
+    "price": "300.00",
+    "url": "",
+    "quantity": 5
+  },
+  {
+    "id": 3,
+    "english_name": "tablelamp",
+    "korean_name": "탁상램프",
+    "sub_category": "일반조명",
+    "price": "400.00",
+    "url": "",
+    "quantity": 4
+  }
+]

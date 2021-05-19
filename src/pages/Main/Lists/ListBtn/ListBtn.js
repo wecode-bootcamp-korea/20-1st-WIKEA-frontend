@@ -22,7 +22,7 @@ class ListBtn extends React.Component {
   };
 
   render() {
-    const { sortbox, sideModal } = this.state;
+    const { sortbox } = this.state;
 
     return (
       <div className="btn_line">
