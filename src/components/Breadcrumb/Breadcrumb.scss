@@ -1,0 +1,17 @@
+@import '../../styles/common.scss';
+
+.breadcrumb_list {
+  display: inline-block;
+  padding: 16px 0;
+
+  li {
+    display: inline;
+    font-size: 14px;
+  }
+}
+
+hr {
+  width: 100%;
+  border: 0.8px solid $--colour-border-light;
+  margin-bottom: 40px;
+}

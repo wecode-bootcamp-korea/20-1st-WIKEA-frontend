@@ -6,7 +6,7 @@ class Shopping extends Component {
   constructor() {
     super();
     this.state = {
-      product: [],
+      productList: [],
     };
   }
 
@@ -15,13 +15,13 @@ class Shopping extends Component {
       .then(response => response.json())
       .then(product => {
         this.setState({
-          product,
+          productList: product,
         });
       });
   }
 
   render() {
-    const { product } = this.state;
+    const { productList } = this.state;
 
     return (
       <main className="shopping">
@@ -35,9 +35,9 @@ class Shopping extends Component {
                   <button>...</button>
                 </header>
                 <div>
-                  {product.map(p => {
-                    return <ShoppingItem key={p.id} product={p} />;
-                  })}
+                  {productList.map(product => (
+                    <ShoppingItem key={product.id} product={product} />
+                  ))}
                 </div>
               </article>
             </div>

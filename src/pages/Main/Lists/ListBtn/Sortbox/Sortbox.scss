@@ -1,0 +1,24 @@
+@import '../../../../../styles/var.scss';
+
+.sortbox {
+  position: absolute;
+  top: 4.5rem;
+  left: 5.5rem;
+  min-width: 300px;
+  padding: 32px;
+  border: 1px solid $--colour-border-light;
+  border-radius: 12px;
+  background-color: $--colour-border-inverse;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+
+  label {
+    @include flexbox(between, center);
+    padding: 1rem 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.57;
+    color: $--colour-text-default;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../../../styles/var.scss';
+
+.products {
+  padding: 3rem 0;
+  border-bottom: 1px solid $--colour-border-light;
+
+  .product_row {
+    @include flexbox(center center);
+    flex-wrap: wrap;
+  }
+}

@@ -30,8 +30,6 @@
           font-weight: 700;
 
           &:hover {
-            width: 75px;
-            border-bottom: 1px solid $--colour-border-dark;
             opacity: 0.8;
             cursor: pointer;
           }
@@ -73,7 +71,7 @@
           border: 1px solid $--colour-border-default;
         }
 
-        #shopping_bag_item_quantities_select {
+        .shopping_bag_item_quantities_select {
           position: absolute;
           top: 8px;
           left: 15px;

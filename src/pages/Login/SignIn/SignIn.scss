@@ -1,0 +1,263 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/var.scss';
+
+.sign_in {
+  display: flex;
+  position: relative;
+
+  .ic-close {
+    position: absolute;
+    top: 8%;
+    transform: translateX(15px);
+    color: $--color-light-gray;
+    font-size: $font-size-24;
+    font-weight: 400;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  .sign_in_aside {
+    @include column-flexbox(between, center);
+    width: 30%;
+    height: 100vh;
+    padding: 30px;
+    background-color: $--colour-brand-blue;
+
+    header {
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      .wikea_logo {
+        width: 88px;
+        height: 44px;
+        border: 1px solid $--color-light-gray;
+      }
+    }
+
+    article {
+      .login_title {
+        margin-bottom: 20px;
+        color: $--colour-brand-yellow;
+        font-size: $font-size-24;
+        font-weight: 700;
+      }
+
+      .login_description,
+      .how_to_login_first {
+        margin-bottom: 5px;
+        color: $--color-light-gray;
+        font-size: $font-size-12;
+        font-weight: 400;
+      }
+
+      .how_to_login_second {
+        margin-top: 30px;
+        color: $--color-light-gray;
+        font-size: $font-size-12;
+        font-weight: 700;
+      }
+    }
+
+    footer {
+      .homepage_address {
+        color: $--color-light-gray;
+        font-size: $font-size-12;
+        font-weight: 400;
+      }
+
+      .personal_info_policy {
+        color: $--color-light-gray;
+        border-bottom: 1px solid $--color-light-gray;
+        font-size: $font-size-12;
+        font-weight: 400;
+
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+
+      .copyright_notice {
+        color: $--color-light-gray;
+        font-size: $font-size-12;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .sign_in_main {
+    @include column-flexbox(center, start);
+    width: 70%;
+    height: 100vh;
+    padding: 30px 80px;
+
+    form {
+      padding-right: 20px;
+      width: 70%;
+
+      .id_input_container {
+        margin-bottom: 60px;
+
+        .id_input_wrapper {
+          position: relative;
+
+          #login_id {
+            display: block;
+            width: 100%;
+            margin-bottom: 8px;
+            padding: 10px 10px 2px 2px;
+            border-bottom: 1px solid $--colour-border-dark;
+          }
+
+          label {
+            position: absolute;
+            top: 0px;
+            transform: translateY(50%);
+
+            &.typing {
+              position: absolute;
+              transform: translateY(1%);
+              font-size: 6px;
+            }
+          }
+
+          .id_invalid_comment {
+            padding: 0px 0px 5px;
+            color: $--colour-icon-favourite;
+            font-size: 6px;
+          }
+
+          .no_display_comment {
+            display: none;
+          }
+        }
+
+        .another_login_option {
+          color: $--colour-border-dark;
+          font-size: $font-size-14;
+          font-weight: 400;
+        }
+
+        .one_time_code_for_login {
+          color: $--colour-border-dark;
+          border-bottom: 1px solid $--colour-border-dark;
+          font-size: $font-size-14;
+          font-weight: 700;
+
+          &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .pw_input_container {
+        margin-bottom: 40px;
+
+        .pw_input_wrapper {
+          position: relative;
+
+          #login_password {
+            display: block;
+            width: 100%;
+            margin-bottom: 8px;
+            padding: 10px 10px 2px 2px;
+            border-bottom: 1px solid $--colour-border-dark;
+          }
+
+          label {
+            position: absolute;
+            top: 0px;
+            transform: translateY(50%);
+
+            &.typing {
+              position: absolute;
+              transform: translateY(5%);
+              font-size: 6px;
+            }
+          }
+
+          .pw_invalid_comment {
+            padding: 0px 0px 5px;
+            color: $--colour-icon-favourite;
+            font-size: 6px;
+          }
+
+          .no_display_comment {
+            display: none;
+          }
+        }
+
+        .ic-lock {
+          position: absolute;
+          top: 10px;
+          right: 0px;
+
+          &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+
+        .finding_password {
+          color: $--colour-border-dark;
+          border-bottom: 1px solid $--colour-border-dark;
+          font-size: $font-size-14;
+          font-weight: 700;
+
+          &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .login_btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 12px;
+        color: $--color-light-gray;
+        background-color: $--colour-brand-blue;
+        border: 1px solid $--colour-brand-blue;
+        border-radius: 30px;
+        font-size: $font-size-13;
+        font-weight: 700;
+
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+
+      .activated {
+        background-color: $--colour-button-primary-emphasised-press;
+      }
+
+      .deactivated {
+        background-color: $--colour-brand-blue;
+      }
+
+      .sign_up_btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        color: $--colour-border-dark;
+        background-color: $--color-light-gray;
+        border: 1px solid $--color-light-gray;
+        border-radius: 30px;
+        font-size: $font-size-13;
+        font-weight: 700;
+
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

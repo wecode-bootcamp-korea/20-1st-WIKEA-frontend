@@ -1,26 +1,33 @@
 @import '../../styles/var.scss';
+
 .shopping {
   margin: 4rem 0;
+
   article {
     h1 {
       margin-bottom: 1.25rem 0;
     }
   }
+
   .order_summary {
     margin: 2.5rem 0;
+
     h2 {
       margin-bottom: 1.25rem;
       font-size: 0.875rem;
       font-weight: 700;
     }
+
     dl {
       @include flexbox(between);
       margin-bottom: 1.25rem;
       font-size: 0.875rem;
+
       &:nth-of-type(2) {
         dt {
           font-weight: 700;
         }
+
         dd {
           font-size: 1.375rem;
         }

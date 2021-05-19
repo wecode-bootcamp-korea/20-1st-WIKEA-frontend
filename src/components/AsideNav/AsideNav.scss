@@ -1,0 +1,72 @@
+@import '../../styles/var.scss';
+
+.aside_nav {
+  padding: 1.25rem 2rem 0 0;
+
+  &.main_menu {
+    max-width: 275px;
+    transition: margin 0.2s ease;
+
+    &.on {
+      margin-right: 320px;
+      border-right: 1px solid $--colour-neutral-grey-100;
+    }
+  }
+
+  &.sub_menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 320px;
+
+    &.on {
+      left: calc(150px + 275px + 2rem);
+    }
+  }
+
+  .nav_title {
+    font-size: 1.375rem;
+    font-weight: bold;
+    line-height: 1.36;
+  }
+
+  .menu_container {
+    padding: 2rem 0;
+    font-size: 0.875rem;
+
+    li {
+      @include flexbox(between, center);
+      height: 33px;
+
+      &:first-child {
+        margin-bottom: 1.375rem;
+        font-weight: bold;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        line-height: 33px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      i {
+        font-size: 1rem;
+        font-weight: bold;
+        color: $--color-10028;
+        transform: rotate(-90deg);
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+
+      &.on {
+        i {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

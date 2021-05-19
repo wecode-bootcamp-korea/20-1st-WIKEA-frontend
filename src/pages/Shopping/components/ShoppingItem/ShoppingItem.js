@@ -17,21 +17,21 @@ class ShoppingItem extends React.Component {
           <div className="shopping_bag_item_details_and_price">
             <div className="shopping_bag_item_details">
               <p className="shopping_bag_item_name_swedish">
-                {product.english_name} 람판
+                {product.english_name} {product.korean_name}
               </p>
               <p className="shopping_bag_item_name_and_color">
-                탁상스탠드, 화이트
+                {product.sub_category}
               </p>
-              <p className="shopping_bag_item_size">29 cm</p>
+              {/* <p className="shopping_bag_item_size">29 cm</p> */}
             </div>
-            <div className="shopping_bag_item_price">₩ 5,000</div>
+            <div className="shopping_bag_item_price">{product.price}</div>
           </div>
 
           <div className="shopping_bag_item_control_list">
             <div className="shopping_bag_item_select_container">
               <select
                 name="shopping_bag_item_quantities"
-                id="shopping_bag_item_quantities_select"
+                className="shopping_bag_item_quantities_select"
               >
                 <option value="1" selected>
                   1

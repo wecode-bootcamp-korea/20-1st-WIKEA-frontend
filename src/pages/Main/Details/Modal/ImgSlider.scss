@@ -1,0 +1,53 @@
+@import '../../../../styles/var.scss';
+
+.carousel-container {
+  width: 450px;
+  margin: 30px auto;
+  border: 0px solid #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+  height: 450px;
+}
+
+%btn {
+  position: absolute;
+  top: 45%;
+  width: 40px;
+  height: 36px;
+  background-color: black;
+}
+
+%icon {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.prevBtn {
+  @extend %btn;
+  left: 0;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+
+  & > i {
+    @extend %icon;
+  }
+}
+
+.nextBtn {
+  @extend %btn;
+  right: 0;
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+
+  & > i {
+    @extend %icon;
+  }
+}

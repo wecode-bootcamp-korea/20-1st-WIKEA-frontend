@@ -1,0 +1,32 @@
+@import '../../../styles/var.scss';
+
+.show_more {
+  @include column-flexbox(center, center);
+
+  .show_more_bar {
+    width: 200px;
+    height: 1px;
+    margin-top: 30px;
+    border: 1px solid $--colour-border-light;
+
+    .show_more_charge_half {
+      width: 50%;
+      height: 1px;
+      border: 1px solid $--colour-border-dark;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.show_more_btn {
+  @include flexbox(center, center);
+  margin-top: 40px;
+  padding: 15px;
+  border: 1.3px solid $--colour-border-light;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: $--colour-border-default;
+  }
+}

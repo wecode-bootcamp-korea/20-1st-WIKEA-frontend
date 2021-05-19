@@ -1,0 +1,46 @@
+@import '../../styles/var.scss';
+
+.footer {
+  @include flexbox(around, start);
+  width: 100%;
+  padding: 150px 4rem;
+  background-color: $--colour-bg-alternative;
+
+  .footer_signup {
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      line-height: 1.5;
+
+      .family_signup {
+        margin-left: 10px;
+        border-bottom: 1px solid $--colour-text-dark;
+      }
+    }
+
+    button {
+      margin-top: 1.25rem;
+      padding: 1rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: white;
+      background-color: $--colour-button-primary-default;
+
+      &:hover {
+        background-color: $--colour-button-primary-hover;
+      }
+    }
+  }
+
+  .links {
+    line-height: 2;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@import '../../../../styles/var.scss';
+
+.btn_line {
+  @include flexbox(between);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid $--colour-border-light;
+  background-color: $--colour-bg-default;
+  z-index: 99;
+
+  .btn_container {
+    padding: 1.25rem 0;
+    overflow: auto;
+
+    button {
+      margin-right: 0.8rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background-color: $--colour-bg-alternative;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: $--colour-button-inverse-disabled-dark;
+      }
+
+      &:active {
+        background-color: $--colour-switch-off-pressed;
+      }
+
+      [class^='ic-'] {
+        margin-left: 0.5rem;
+      }
+    }
+
+    button.visible {
+      color: $--colour-text-inverse;
+      background-color: $--colour-button-primary-default;
+    }
+  }
+
+  .product_btn {
+    @include flexbox(center end);
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    span {
+      margin-right: 7px;
+      padding: 5px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-bottom: 1px solid $--colour-border-dark;
+      }
+    }
+
+    .product_btn_product {
+      border-bottom: 1px solid $--colour-border-dark;
+    }
+
+    .product_count {
+      color: $--colour-text-lightest;
+      cursor: initial;
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+}

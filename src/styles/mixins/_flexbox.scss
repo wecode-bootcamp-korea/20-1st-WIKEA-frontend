@@ -26,6 +26,7 @@ $flex-map: (
 
 @mixin column-flexbox($jc: center, $ai: center) {
   display: flex;
+  justify-content: _get-flex-value($jc);
   flex-direction: column;
   justify-content: _get-flex-value($jc);
   align-items: _get-flex-value($ai);
