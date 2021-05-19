@@ -9,10 +9,9 @@ class ShoppingItem extends React.Component {
       <div className="shopping_item">
         <img
           className="shopping_bag_one_of_item_photo"
-          alt="Table Lamp"
-          src="/images/ShoppingBag/tableLamp.jpeg"
+          alt={product.english_name}
+          src={product.url}
         />
-
         <div className="shopping_bag_one_of_item_info_container">
           <div className="shopping_bag_item_details_and_price">
             <div className="shopping_bag_item_details">
@@ -22,20 +21,16 @@ class ShoppingItem extends React.Component {
               <p className="shopping_bag_item_name_and_color">
                 {product.sub_category}
               </p>
-              {/* <p className="shopping_bag_item_size">29 cm</p> */}
             </div>
             <div className="shopping_bag_item_price">{product.price}</div>
           </div>
-
           <div className="shopping_bag_item_control_list">
             <div className="shopping_bag_item_select_container">
               <select
-                name="shopping_bag_item_quantities"
+                name="itemCount"
                 className="shopping_bag_item_quantities_select"
               >
-                <option value="1" selected>
-                  1
-                </option>
+                <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>

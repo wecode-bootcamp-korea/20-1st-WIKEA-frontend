@@ -4,8 +4,13 @@
   margin: 4rem 0;
 
   article {
-    h1 {
-      margin-bottom: 1.25rem 0;
+    header {
+      display: flex;
+      justify-content: space-between;
+
+      h1 {
+        margin-bottom: 1.25rem 0;
+      }
     }
   }
 
@@ -23,7 +28,7 @@
       margin-bottom: 1.25rem;
       font-size: 0.875rem;
 
-      &:nth-of-type(2) {
+      .order_price {
         dt {
           font-weight: 700;
         }
