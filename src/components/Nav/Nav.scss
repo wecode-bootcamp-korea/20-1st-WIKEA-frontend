@@ -1,40 +1,33 @@
-@import '/src/styles/common';
-
+@import '/src/styles/var.scss';
 .nav_wrap {
   width: 100%;
   position: fixed;
   background-color: white;
   transition: 0.4s ease;
-
+  z-index: 99;
   &.hide {
     transform: translateY(-132px);
   }
-
   top: 0;
   .nav_menu {
     @include flexbox(between);
     position: relative;
     padding: 0 20px;
     flex-wrap: wrap;
-
-    img {
+    .logo {
       width: 75px;
       height: 35px;
       margin: 15px 0;
     }
-
     .options {
       font-weight: 700;
       font-size: 14px;
     }
-
     [class^='ic-'] {
       font-size: 24px;
     }
-
     .nav-menu-group {
       @include flexbox(end);
-
       a,
       button {
         @include flexbox;
@@ -43,12 +36,10 @@
         margin-left: 4px;
       }
     }
-
     .searchBox {
       width: 100%;
       height: 44px;
       position: relative;
-
       input {
         width: 100%;
         padding: 8px 54px;
@@ -59,63 +50,51 @@
         font-size: 16px;
         line-height: 1.5;
       }
-
       [class^='ic-'] {
         position: absolute;
       }
-
       .ic-search {
         @include pos-center-y;
         left: 24px;
       }
-
       .ic-store {
         @include pos-center-y;
         right: 24px;
       }
     }
-
     @include responsive(T) {
       height: 70px;
       padding: 0 32px;
       flex-wrap: nowrap;
-
-      img {
+      .logo {
         order: -1;
         height: 30px;
       }
-
       .searchBox {
         order: -1;
         width: 375px;
       }
     }
-
     @include responsive(D) {
       @include flexbox(between);
       margin: 0 60px;
       height: 92px;
-
       .options {
         order: -1;
-
         span {
           padding: 0 15px;
         }
       }
-
-      img {
+      .logo {
         order: -1;
         height: 36px;
         width: 90px;
         margin-left: 64px;
       }
-
       .searchBox {
         order: -1;
         width: 500px;
       }
-
       .nav-menu-group button {
         @include pos-center-y;
         left: 0;
