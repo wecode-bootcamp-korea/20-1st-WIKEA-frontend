@@ -1,5 +1,6 @@
 import React from 'react';
 import Message from './Message';
+//최종 merge에 주석 풀기
 // import MainNavModal from '../MainNavModal/MainNavModal';
 import './Nav.scss';
 
@@ -88,10 +89,10 @@ class Nav extends React.Component {
               <i className="ic-store" />
             </button>
           </div>
-          <MainNavModal
+          {/* <MainNavModal
             sideModalOn={isMainNavModalOn}
             handleSideModalOn={this.handleMainNavModalOn}
-          />
+          /> */}
         </nav>
       </div>
     );
